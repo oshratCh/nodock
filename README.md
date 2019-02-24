@@ -55,4 +55,4 @@ Test
 ``` 
    npm run test 
 ```
-    Note: There is only ~20% of test coverage (sorry...)
+Note: There is only ~20% of test coverage (sorry...)
