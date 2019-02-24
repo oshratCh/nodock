@@ -22,7 +22,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ARG NODE_VERSION=latest
 
 # Install the specified NODE_VERSION or grab latest
-RUN n "$NODE_VERSION"
+#RUN n "$NODE_VERSION"
 
 # Install YARN
 RUN npm i -g yarn

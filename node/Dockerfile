@@ -1,8 +1,11 @@
 FROM phusion/baseimage:0.9.19
+FROM node:8.2
 
 RUN apt-get update &&\
-    apt-get install -y npm &&\
-    npm install -g n
+    apt-get install -y npm
+    # apt-get install curl &&\
+    # curl -sL https://deb.nodesource.com/setup_4.x | bash &&\
+    # apt-get install nodejs
 
 ARG NODE_ENV=production
 ARG NODE_VERSION=latest
@@ -21,7 +24,7 @@ RUN mkdir -p /home/www-app &&\
     chmod 777 /home/www-app -R
 
 # Install the specified NODE_VERSION or grab latest
-RUN n "$NODE_VERSION"
+#RUN n 8.15.0
 
 # Install Yarn
 
